@@ -1,47 +1,82 @@
-<!doctype html>
+<!DOCTYPE html>
 <html class="no-js" lang="">
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+		<title>EmojiPages</title>
+		<meta
+			name="description"
+			content="A listing of books depicted through emojis."
+		/>
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link
+			rel="stylesheet"
+			href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
+			integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ"
+			crossorigin="anonymous"
+		/>
+		<link
+			href="https://fonts.googleapis.com/css?family=Kreon:700|Open+Sans:400,700&display=swap"
+			rel="stylesheet"
+		/>
+		<link rel="stylesheet" href="main.css" />
+		<link rel="icon" href="favicon.ico" type="image/gif" sizes="16x16" />
+	</head>
 
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>EmojiPages</title>
-    <meta name="description"
-        content="A listing of books depicted through emojis.">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
-        integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
-    <link href="https://fonts.googleapis.com/css?family=Kreon:700|Open+Sans:400,700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="main.css">
-    <link rel="icon" href="favicon.ico" type="image/gif" sizes="16x16">
-</head>
-
-<body>
-    <!--[if lt IE 8]>
-            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-        <![endif]-->
-    <main>
-        <header>
-            <h1>EmojiPages</h1>
-            <div class="heading-content">
-                <div class="header">
-                    <h2>A listing of books depicted through emojis. 💖</h2>
-                    <p>Click on the emojis to reveal the book name, year and author!</p>
-                </div>
-                <div class="contribute-callout">
-                    <p>Want to add to EmojiPages? Head to Github! ✨</p>
-                    <a href="https://github.com/brittanyrw/emojipages" target="_blank">Contribute</a>
-                </div>
-            </div>
-        </header>
-        <section id="books"></section>
-        <footer>
-            <p>EmojiPages currently has <span></span> books and plays. 💖</p>
-        </footer>
-    </main>
-    <script src="https://twemoji.maxcdn.com/v/latest/twemoji.min.js" crossorigin="anonymous"></script>
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <script src="data.js"></script>
-    <script src="app.js"></script>
-</body>
-
+	<body>
+		<!--[if lt IE 8]>
+			<p class="browserupgrade">
+				You are using an <strong>outdated</strong> browser. Please
+				<a href="http://browsehappy.com/">upgrade your browser</a> to improve
+				your experience.
+			</p>
+		<![endif]-->
+		<main>
+			<header>
+				<h1>EmojiPages</h1>
+				<div class="heading-content">
+					<div class="header">
+						<h2>A listing of books depicted through emojis. 💖</h2>
+						<p>Click on the emojis to reveal the book name, year and author!</p>
+					</div>
+					<div class="contribute-callout">
+						<p>Want to add to EmojiPages? Head to Github! ✨</p>
+						<a href="https://github.com/brittanyrw/emojipages" target="_blank"
+							>Contribute</a
+						>
+					</div>
+					<div id="filter">
+						<h3>Filter:</h3>
+						<select id="years" name="years">
+							<option value="select">Select Decade</option>
+							<option value="1910">1910</option>
+							<option value="1920">1920</option>
+							<option value="1930">1930</option>
+							<option value="1940">1940</option>
+							<option value="1950">1950</option>
+							<option value="1960">1960</option>
+							<option value="1970">1970</option>
+							<option value="1980">1980</option>
+							<option value="1990">1990</option>
+							<option value="2000">2000</option>
+							<option value="2010">2010</option>
+							<option value="2020">2020</option>
+						</select>
+					</div>
+				</div>
+			</header>
+			<section id="books"></section>
+			<section id="error">No cards match the selected years</section>
+			<footer>
+				<p>EmojiPages currently has <span></span> books and plays. 💖</p>
+			</footer>
+		</main>
+		<script
+			src="https://twemoji.maxcdn.com/v/latest/twemoji.min.js"
+			crossorigin="anonymous"
+		></script>
+		<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+		<script src="data.js"></script>
+		<script src="app.js"></script>
+	</body>
 </html>
